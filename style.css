@@ -19,6 +19,8 @@ body {
     padding: 20px;
     margin:30px;
     border: solid 4px var(--text-color);
+    border-radius: 15px;
+    box-shadow: 20px 20px 60px #00496f, -20px -20px 60px #0073ad;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -49,14 +51,14 @@ h1 {
     font-size: 4.58em;
 }
 
-.cp {
+header .cp {
     margin: 3px;
     padding: 5px;
     background-color:rgba(0,0,0,0.5);
     border-radius: 10px;
 }
 
-.cp:focus, .cp:hover {
+header .cp:focus, header .cp:hover {
     background-color:var(--background-color);
 }
 
@@ -67,4 +69,76 @@ header p {
 
 header h1 {
     margin-bottom: 35px;
+}
+
+a {
+    color:aqua;
+}
+
+a:hover, a:focus {
+    color:white;
+}
+
+a:visited {
+    color:aquamarine;
+}
+
+footer {
+    text-align:center;
+}
+
+nav {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    margin:0;
+    padding: 5px 30px;
+    background: rgb(0,94,142);
+    background: linear-gradient(180deg, rgba(0,94,142,0) 0%, rgba(0,65,98,0.6) 70%);
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.45s ease;
+}
+
+nav a:hover, nav a:focus {
+    translate: 0 -15px;
+}
+
+nav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+      float: right;
+      display: block;
+      right:0;
+      margin-right:60px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar.responsive a.icon {
+      position: absolute;
+      bottom: 0;
+    }
+    .navbar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .navbar.responsive {
+        background: rgb(0,94,142);
+        background: linear-gradient(180deg, rgba(0,94,142,1) 0%, rgba(0,65,98,0.9) 70%);
+    }
 }
